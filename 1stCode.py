@@ -1,24 +1,13 @@
-import random
-
-choices = ["rock", "paper", "scissor"]
-
-while True:
-    computer = random.choice(choices)
-
-    a = input("Enter (rock, paper or scissor) or exit: ")
-
-    if(a == "exit"):
-        print("Thanks for playing.")
-        break
-
-    if(a not in choices):
-        print("Invalid input. Try again!")
-
+def calculator(a, b, op):
+    if op == '+':
+        return a + b
+    elif op == '-':
+        return a - b
+    elif op == '*':
+        return a * b
+    elif op == '/':
+        return a / b
     else:
-        print(f"Computer choice: {computer}")
-        if(a == computer):
-            print("It's a tie.")
-        elif((a == "rock" and computer == "scissor") or (a == "paper" and computer == "rock") or (a == "scissor" and computer == "paper")):
-            print("You win.")
-        else:
-            print("You lose.")
+        return "Invalid operator"
+
+print("Calc 5 + 3 =", calculator(5, 3, '+'))
