@@ -1,0 +1,1 @@
+jahid(a,b,c)
